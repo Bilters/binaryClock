@@ -27,14 +27,44 @@ function updateTime() {
     }
 
     function updateSecondsFirst() {
-        firstSecs = secs / 10;
+        firstSecs = Math.floor(secs / 10);
         selector1 = document.querySelector('#s10');
         selector2 = document.querySelector('#s20');
         selector4 = document.querySelector('#s40');
         switchCaseNumbers6(firstSecs);
     }
+
+    function updateMinutesLast() {
+        // Isolating last number
+        lastMins = mins % 10;
+        selector1 = document.querySelector('#m01');
+        selector2 = document.querySelector('#m02');
+        selector4 = document.querySelector('#m04');
+        selector8 = document.querySelector('#m08');
+        switchCaseNumbers9(lastMins);
+    }
+
+    function updateMinutesFirst() {
+        firstMins = Math.floor(mins / 10);
+        selector1 = document.querySelector('#m10');
+        selector2 = document.querySelector('#m20');
+        selector4 = document.querySelector('#m40');
+        switchCaseNumbers6(firstMins);
+    }
+
+    function updateHoursLast() {
+        lastHours = Math.floor(hour / 10);
+        selector1 = document.querySelector('#h01');
+        selector2 = document.querySelector('#h02');
+        selector4 = document.querySelector('#h04');
+        switchCaseNumbers9(lastHours);
+    }
+
     updateSecondsLast();
     updateSecondsFirst();
+    updateMinutesLast();
+    updateMinutesFirst();
+    updateHoursLast();
 
 }
 
@@ -101,45 +131,45 @@ function switchCaseNumbers9(time) {
             selector8.checked = false;
             break;
     }
+}
 
-    function switchCaseNumbers6(time) {
-        switch (time) {
-            case 1:
-                selector1.checked = true;
-                selector2.checked = false;
-                selector4.checked = false;
-                break;
-            case 2:
-                selector1.checked = false;
-                selector2.checked = true;
-                selector4.checked = false;
-                break;
-            case 3:
-                selector1.checked = true;
-                selector2.checked = true;
-                selector4.checked = false;
-                break;
-            case 4:
-                selector1.checked = false;
-                selector2.checked = false;
-                selector4.checked = true;
-                break;
-            case 5:
-                selector1.checked = true;
-                selector2.checked = false;
-                selector4.checked = true;
-                break;
-            case 6:
-                selector1.checked = false;
-                selector2.checked = true;
-                selector4.checked = true;
-                break;
-            default:
-                selector1.checked = false;
-                selector2.checked = false;
-                selector4.checked = false;
-                selector8.checked = false;
-                break;
-        }
+function switchCaseNumbers6(time) {
+    switch (time) {
+        case 1:
+            selector1.checked = true;
+            selector2.checked = false;
+            selector4.checked = false;
+            break;
+        case 2:
+            selector1.checked = false;
+            selector2.checked = true;
+            selector4.checked = false;
+            break;
+        case 3:
+            selector1.checked = true;
+            selector2.checked = true;
+            selector4.checked = false;
+            break;
+        case 4:
+            selector1.checked = false;
+            selector2.checked = false;
+            selector4.checked = true;
+            break;
+        case 5:
+            selector1.checked = true;
+            selector2.checked = false;
+            selector4.checked = true;
+            break;
+        case 6:
+            selector1.checked = false;
+            selector2.checked = true;
+            selector4.checked = true;
+            break;
+        default:
+            selector1.checked = false;
+            selector2.checked = false;
+            selector4.checked = false;
+            selector8.checked = false;
+            break;
     }
 }
