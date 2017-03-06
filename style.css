@@ -1,0 +1,56 @@
+html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+body {
+    background-color: hsl(0, 0%, 20%);
+}
+
+input {
+    -webkit-appearance: none;
+    /* remove default */
+    display: inline-block;
+    margin: 10px;
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    cursor: pointer;
+    transform: rotate(180deg);
+    box-shadow: hsla(0, 0%, 100%, .4) 0 1px 1px, inset hsla(0, 0%, 0%, .5) 0 0 0 1px;
+    background-color: hsla(0, 0%, 0%, .2);
+    background-image: -webkit-radial-gradient( hsla(200, 100%, 90%, 1) 0%, hsla(168, 95%, 41%, 1) 15%, hsla(168, 95%, 41%, .3) 28%, hsla(200, 100%, 30%, 0) 70%);
+    background-repeat: no-repeat;
+    -webkit-transition: background-position .15s cubic-bezier(.8, 0, 1, -1), -webkit-transform .25s cubic-bezier(.8, 0, 1, -1);
+}
+
+input, input:active {
+    background-position: -24px 0;
+}
+
+input:not(:active) {
+    background-position: 24px 0;
+}
+
+input:checked {
+    background-position: 0 0;
+}
+
+#hours, #minutes, #seconds {
+    transform: rotate(-90deg);
+    display: inline-block;
+    width: 200px;
+    margin: 0 -50px;
+    padding: 10px;
+}
+
+h1 {
+    font-family: 'Nixie One', cursive;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 50px;
+    letter-spacing: .2em;
+}

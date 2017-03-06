@@ -5,53 +5,52 @@
     <meta charset="utf-8">
     <title>BinaryClock</title>
     <script src="script.js" charset="utf-8"></script>
-    <style>
-        #clock {margin-top: 50px;}
-        #hours {float: left;transform: rotate(-90deg);}
-        #minutes {float: left;transform: rotate(-90deg);}
-        #seconds {float: left;transform: rotate(-90deg);}
-    </style>
+    <link href="https://fonts.googleapis.com/css?family=Nixie+One" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body onload="updateTime()">
-    <div id="clock">
-        <div id="hours">
-            <form name="hoursFirst">
-                <input type="checkbox" id="h10" />
-                <input type="checkbox" id="h20" />
-            </form>
-            <form name="hourLast">
-                <input type="checkbox" id="h01" />
-                <input type="checkbox" id="h02" />
-                <input type="checkbox" id="h04" />
-                <input type="checkbox" id="h08" />
-            </form>
-        </div>
-        <div id="minutes">
-            <form name="minutesFirst">
-                <input type="checkbox" id="m10" />
-                <input type="checkbox" id="m20" />
-                <input type="checkbox" id="m40" />
-            </form>
-            <form name="minutesLast">
-                <input type="checkbox" id="m01" />
-                <input type="checkbox" id="m02" />
-                <input type="checkbox" id="m04" />
-                <input type="checkbox" id="m08" />
-            </form>
-        </div>
-        <div id="seconds">
-            <form name="secondsFirst">
-                <input type="checkbox" id="s10" />
-                <input type="checkbox" id="s20" />
-                <input type="checkbox" id="s40" />
-            </form>
-            <form name="secondsLast">
-                <input type="checkbox" id="s01" />
-                <input type="checkbox" id="s02" />
-                <input type="checkbox" id="s04" />
-                <input type="checkbox" id="s08" />
-            </form>
+    <div id="container">
+        <h1>Binary clock</h1>
+        <div class="clock">
+            <div id="hours">
+                <form name="hoursFirst">
+                    <input type="checkbox" name="hoursFirst" id="h10" />
+                    <input type="checkbox" name="hoursFirst" id="h20" />
+                </form>
+                <form name="hourLast">
+                    <input type="checkbox" name="hoursLast" id="h01" />
+                    <input type="checkbox" name="hoursLast" id="h02" />
+                    <input type="checkbox" name="hoursLast" id="h04" />
+                    <input type="checkbox" name="hoursLast" id="h08" />
+                </form>
+            </div>
+            <div id="minutes">
+                <form name="minutesFirst">
+                    <input type="checkbox" id="m10" name="minutesFirst" />
+                    <input type="checkbox" id="m20" name="minutesFirst" />
+                    <input type="checkbox" id="m40" name="minutesFirst" />
+                </form>
+                <form name="minutesLast">
+                    <input type="checkbox" id="m01" name="minutesLast" />
+                    <input type="checkbox" id="m02" name="minutesLast" />
+                    <input type="checkbox" id="m04" name="minutesLast" />
+                    <input type="checkbox" id="m08" name="minutesLast" />
+                </form>
+            </div>
+            <div id="seconds">
+                <form name="secondsFirst">
+                    <input type="checkbox" id="s10" name="seconsFirst" />
+                    <input type="checkbox" id="s20" name="seconsFirst" />
+                    <input type="checkbox" id="s40" name="seconsFirst" />
+                </form>
+                <form name="secondsLast">
+                    <input type="checkbox" id="s01" name="seconsLast" />
+                    <input type="checkbox" id="s02" name="seconsLast" />
+                    <input type="checkbox" id="s04" name="seconsLast" />
+                    <input type="checkbox" id="s08" name="seconsLast" />
+                </form>
+            </div>
         </div>
     </div>
 </body>
