@@ -16,10 +16,6 @@ function updateTime() {
     setTimeout("updateTime()", 1000);
     console.log(totalTime);
 
-    // hour = 22;
-    // mins = 38;
-    // secs = 58;
-
     function updateSecondsLast() {
         lastSecs = secs % 10;
         selector1 = document.querySelector('#s01');
@@ -69,24 +65,6 @@ function updateTime() {
         selector2 = document.querySelector('#h20');
         switchCaseNumbers2(firstHours);
     }
-
-
-    //
-    // function updateHoursFirst() {
-    //     firstHours = Math.floor(hour / 10);
-    //     selector1 = document.querySelector('#h10');
-    //     selector2 = document.querySelector('#h20');
-    //     switchCaseNumbers2(firstHours);
-    // }
-    //
-    // function updateHoursLast() {
-    //     lastHours = hour % 10;
-    //     selector1 = document.querySelector('#h01');
-    //     selector2 = document.querySelector('#h02');
-    //     selector2 = document.querySelector('#h04');
-    //     selector2 = document.querySelector('#h08');
-    //     switchCaseNumbers9(lastHours);
-    // }
 
     updateSecondsLast();
     updateSecondsFirst();
